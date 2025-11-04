@@ -13,11 +13,12 @@ def resize_img(path):
 for path in os.listdir('/content/inputs/test/cloth/'):
     resize_img(f'/content/inputs/test/cloth/{path}')
 
-os.chdir('/content/clothes-virtual-try-on')
+# use VITON as the working folder inside Colab /content
+os.chdir('/content/VITON')
 os.system("rm -rf /content/inputs/test/cloth/.ipynb_checkpoints")
 os.system("python cloth-mask.py")
 os.chdir('/content')
-os.system("python /content/clothes-virtual-try-on/remove_bg.py")
+os.system("python /content/VITON/remove_bg.py")
 os.system(
     "python3 /content/Self-Correction-Human-Parsing/simple_extractor.py --dataset 'lip' --model-restore '/content/Self-Correction-Human-Parsing/checkpoints/final.pth' --input-dir '/content/inputs/test/image' --output-dir '/content/inputs/test/image-parse'")
 os.chdir('/content')
@@ -36,6 +37,6 @@ with open('/content/inputs/test_pairs.txt', 'w') as file:
 
 # making predictions
 os.system(
-    "python /content/clothes-virtual-try-on/test.py --name output --dataset_dir /content/inputs --checkpoint_dir /content/clothes-virtual-try-on/checkpoints --save_dir /content/")
+    "python /content/VITON/test.py --name output --dataset_dir /content/inputs --checkpoint_dir /content/VITON/checkpoints --save_dir /content/")
 os.system("rm -rf /content/inputs")
 os.system("rm -rf /content/output/.ipynb_checkpoints")
