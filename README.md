@@ -1,26 +1,3 @@
-# Cloths Virtual Try On
-[![Open in colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yuviii21/VITON/blob/main/setup_gradio.ipynb)
-
-## Updates
-- **[19/02/2024] From now on this repo won't receive any future updates from my side (Spoiler: It's not gone for good 😉. Expect its return, stronger than ever.) (Community Contributions & Issues discussions are still welcome 🤗)**
-- [26/12/2023] Added the Gradio interface and removed all the external depenency
-- [19/12/2023] Fixed the `openpose` installation and missing model weights issue
-- [19/12/2023] Replaced the `remove.bg` dependecy with `rembg`
-- [26/04/2023] Fixed the GAN generation issue
-
-## Star History
-[![Star History Chart](https://api.star-history.com/svg?repos=yuviii21/VITON&type=Date)](https://star-history.com/#yuviii21/VITON&Date)
-
-## Table of contents
-- [Cloths Virtual Try On](#cloths-virtual-try-on)
-  - [Table of contents](#table-of-contents)
-  - [General info](#general-info)
-  - [Demo](#demo)
-  - [Block Diagram](#block-diagram)
-  - [Methodology](#methodology)
-  - [Usage](#usage)
-  - [Citation](#citation)
-
 ## General info
 
 This project is a part of a crework community project. While buying clothes online, it is difficult for a customer to select a desirable outfit in the first attempt because they can’t try on clothes. This project aims to solve this problem.
